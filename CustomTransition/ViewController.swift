@@ -16,19 +16,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    func pushFromRightAnimator() {
-        let transition = CATransition()
-        transition.duration = 0.3
-        transition.type = kCATransitionPush
-        transition.subtype = kCATransitionFromRight
-        view.window?.layer.add(transition, forKey: kCATransition)
     }
 
     @IBAction func showButtonTapped(_ sender: UIButton) {
-
         let storyboard = UIStoryboard(name: "SecondView", bundle: nil)
         guard let rootVC = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else {
             return
